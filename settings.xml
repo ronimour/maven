@@ -36,6 +36,16 @@
               </httpConfiguration>
           </configuration>
       </server>
+
+      <server>
+          <id>packagecloud.release</id>
+          <password>2c098e597a0cea758d14dbf374cfcac035be478d2b5dd2d5</password>
+      </server>
+      <server>
+          <id>packagecloud.snapshot</id>
+          <password>2c098e597a0cea758d14dbf374cfcac035be478d2b5dd2d5</password>
+      </server>
+
   </servers>
 
   <profiles>
