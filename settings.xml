@@ -3,7 +3,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-
+  <!--
   <mirrors>
       <mirror>
           <id>UK</id>
@@ -12,12 +12,13 @@
           <mirrorOf>central</mirrorOf>
       </mirror>
   </mirrors>
-
+  -->
   <servers>
+    <!--
       <server>
           <id>maven.oracle.com</id>
-          <username>your oracle user name here</username>
-          <password>your password here</password>
+          <username>fly.yamaha@gmail.com</username>
+          <password>{cujQSo50cTYHfvuBvshHmP6OJf1xQWA+NG0dg0NJ6eE=}</password>
           <configuration>
               <basicAuthScope>
                   <host>ANY</host>
@@ -36,7 +37,7 @@
               </httpConfiguration>
           </configuration>
       </server>
-
+      -->
       <server>
           <id>packagecloud.release</id>
           <password>2c098e597a0cea758d14dbf374cfcac035be478d2b5dd2d5</password>
@@ -47,6 +48,11 @@
       </server>
       <server>
           <id>nexus-snapshot</id>
+          <username>admin</username>
+          <password>admin123</password>
+      </server>
+      <server>
+          <id>nexus-release</id>
           <username>admin</username>
           <password>admin123</password>
       </server>
