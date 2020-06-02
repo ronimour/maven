@@ -45,6 +45,11 @@
           <id>packagecloud.snapshot</id>
           <password>2c098e597a0cea758d14dbf374cfcac035be478d2b5dd2d5</password>
       </server>
+      <server>
+          <id>nexus-snapshot</id>
+          <username>admin</username>
+          <password>admin123</password>
+      </server>
 
   </servers>
 
