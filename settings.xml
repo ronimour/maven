@@ -4,36 +4,57 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
 
-    <mirrors>
-        <mirror>
-            <id>UK</id>
-            <name>UK Central</name>
-            <url>http://uk.maven.org/maven2</url>
-            <mirrorOf>central</mirrorOf>
-        </mirror>
-    </mirrors>
-	
-	<server>
-    <id>maven.oracle.com</id>
-    <username>username</username>
-    <password>password</password>
-    <configuration>
-      <basicAuthScope>
-        <host>ANY</host>
-        <port>ANY</port>
-        <realm>OAM 11g</realm>
-      </basicAuthScope>
-      <httpConfiguration>
-        <all>
-          <params>
-            <property>
-              <name>http.protocol.allow-circular-redirects</name>
-              <value>%b,true</value>
-            </property>
-          </params>
-        </all>
-      </httpConfiguration>
-    </configuration>
-  </server>
+  <mirrors>
+      <mirror>
+          <id>UK</id>
+          <name>UK Central</name>
+          <url>http://uk.maven.org/maven2</url>
+          <mirrorOf>central</mirrorOf>
+      </mirror>
+  </mirrors>
+
+  <servers>
+      <server>
+          <id>maven.oracle.com</id>
+          <username>your oracle user name here</username>
+          <password>your password here</password>
+          <configuration>
+              <basicAuthScope>
+                  <host>ANY</host>
+                  <port>ANY</port>
+                  <realm>OAM 11g</realm>
+              </basicAuthScope>
+              <httpConfiguration>
+                  <all>
+                      <params>
+                          <property>
+                              <name>http.protocol.allow-circular-redirects</name>
+                              <value>%b,true</value>
+                          </property>
+                      </params>
+                  </all>
+              </httpConfiguration>
+          </configuration>
+      </server>
+  </servers>
+
+  <profiles>
+      <profile>
+          <id>jboss</id>
+          <repositories>
+              <repository>
+                  <id>redhat-ga</id>
+                  <url>https://maven.repository.redhat.com/ga/</url>
+                  <snapshots>
+                      <enabled>false</enabled>
+                  </snapshots>
+              </repository>
+          </repositories>
+      </profile>
+  </profiles>
+
+  <activeProfiles>
+      <activeProfile>jboss</activeProfile>
+  </activeProfiles>  
 	
 </settings>
