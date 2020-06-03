@@ -10,3 +10,6 @@ mvn archetype:generate -DarchetypeGroupÍd=org.apache.maven.archetype -Darchetyp
 
 mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc -Dversion=12.1.0.1 -Dpackaging=jar
 
+# Activating/Desactivating build profiles --> desactivating pageclound and activing nexus_distro
+
+mvn clean deploy -P \!packagecloud,nexus_distro
