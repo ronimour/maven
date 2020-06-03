@@ -13,3 +13,7 @@ mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=o
 # Activating/Desactivating build profiles --> desactivating pageclound and activing nexus_distro
 
 mvn clean deploy -P \!packagecloud,nexus_distro
+
+# Release plugin DryRun --> check what will happpens
+
+mvn release:prepare -DdryRun=true
